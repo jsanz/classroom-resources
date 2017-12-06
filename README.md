@@ -96,9 +96,11 @@ Of course to present again the list of courses you need to put somewhere the pie
 
 ## Other features and ideas
 
+* I may improve the rendering of the resources like better wording, using icons per type, etc. In that case I think I'd put types as another collection to structure better their metadata.
+
 * There is already a XML feed to retrieve the last updates on your resources. This way you can link your site with any syndicated client, pipe to a social network, etc. You can access it from the front page or from `http://yoursite/atom_resources.xml`.
 
-* It's actually pretty easy to add a blogs or news section to this site, I'll likely add it in the future. It's all about creating a `_posts` folder, put there your files using typical [Jekyll workflow][8] and then adding a layout and a listing on the frontpage or a dedicated page.
+* It's actually pretty easy to add a blog or news section to this site, I'll likely add it in the future. It's all about creating a `_posts` folder, put there your files using typical [Jekyll work-flow][8] and then adding a layout and a listing on the front page or a dedicated page.
 
 * Another nice feature would be to configure a template to use [Netlify CMS][9] so teachers don't need to use GitHub or markdown at all, just a nice web interface that presents a form to add new resources and automatically pushes the changes or new resources to the repository triggering the website deployment automatically.
 
