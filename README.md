@@ -114,3 +114,4 @@ Of course to present again the list of courses you need to put somewhere the pie
 [10]: https://pages-themes.github.io/cayman/
 [11]: https://pages.github.com/versions/
 [12]: http://alanwsmith.com/jekyll-liquid-date-formatting-examples
+[13]: https://github.com/pages-themes/merlot
