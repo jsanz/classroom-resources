@@ -1,0 +1,10 @@
+
+{% for course in site.courses %}
+    {% if include.course == course.slug %}
+        {% for subject in course.subjects %}
+            {% if subject[0] == include.subject %}
+                {{ subject[1].title }}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
