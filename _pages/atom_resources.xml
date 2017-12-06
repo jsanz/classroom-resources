@@ -16,7 +16,7 @@ permalink: /atom_resources.xml
  {% assign resources_by_date = site.resources | sort: 'date' %}
  {% for page in resources_by_date reversed limit: 25  %} <entry>
    <title>{{ page.title | xml_escape }}</title>
-   <link href="{{ site.url }}{{ page.url }}"/>
+   <link href="{{ site.url }}{{ page.url | relative_url }}"/>
    <updated>{{ page.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ page.id }}</id>
    <content type="html">{% include resource_post.html resaurce=page xml=true %}</content>

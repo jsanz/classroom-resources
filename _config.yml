@@ -1,8 +1,11 @@
 theme              : jekyll-theme-cayman
 title              : High School resources manager
-description: >-
-            This website servers as a template for teachers that want to generate
-            a website to provide resources by course to their students.
+description        : >-
+                    This website servers as a template for teachers that want to generate
+                    a website to provide resources by course to their students.
+
+url                : http://jsanz.github.io/highschool-resources
+baseurl            : /highschool-resources
 
 # SEO tag
 twitter:
