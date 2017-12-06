@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{% for subject in page.subjects %}
+    <h2>{{ subject[1].title }}</h2>
+    <ul>{% assign resources_by_date = site.resources | sort: 'date' %}
+    {% for resource in resources_by_date %}{% if resource.course == page.slug and resource.subject == subject[0] %}
+            {% include resource_li.html resource=resource %}
+    {% endif %}{% endfor %}
+    </ul>
+{% endfor %}

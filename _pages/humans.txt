@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /humans.txt
+---
+
+/* TEAM */
+
+	Chef:Jorge Sanz
+	Contact: xurxosanz [at] gmail.com
+	Twitter: @xurxosanz
+	From: Aldaia, Valencia, Spain
+
+
+/* THANKS */
+
+	To all those teachers for making our world a better place.
+
+/* SITE */
+
+	Language: English
+	Standards: HTML5, CSS3
+	Components: SASS
+	Services: 
+	IDE: VS Code, GIMP
+	Site Generator: Jekyll with the Cayman theme
+	Hosting: Github Pages
+	SCM: Github

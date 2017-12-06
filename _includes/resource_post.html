@@ -1,0 +1,13 @@
+{% capture my_content %}
+{%unless include.xml %}<h2>{{ page.title }}</h2>{% endunless %}
+<ul>
+    <li>Visit the <a href="{{ page.link}}">resource</a></li>
+    <li>Updated: {{ page.date | date: '%d/%m/%Y' }}</li>
+    <li>Type: {{ page.type}} </li>
+    <li>Subject: {{ page.subject }}</li>
+    <li>Course: <a href="/courses/{{ page.course | slugify }}">{{ page.course }}</a></li>
+</ul>
+
+<hr>
+{{ page.content }}
+{% endcapture %}{%if include.xml %}{{ my_content | xml_escape | strip }}{% else %}{{ my_content }}{% endif %}

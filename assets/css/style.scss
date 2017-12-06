@@ -1,0 +1,17 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header{
+    padding: 2rem 6rem;
+
+    h1 a {
+        color: white;
+    }
+}
+
+.btn.active{
+    font-weight: bold;
+    text-decoration: underline;
+}

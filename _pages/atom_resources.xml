@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /atom_resources.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>{{ site.title }}</title>
+ <link href="{{ site.url }}/atom.xml" rel="self"/>
+ <link href="{{ site.url }}"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.url }}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
+ </author>
+ {% assign resources_by_date = site.resources | sort: 'date' %}
+ {% for page in resources_by_date reversed limit: 25  %} <entry>
+   <title>{{ page.title | xml_escape }}</title>
+   <link href="{{ site.url }}{{ page.url }}"/>
+   <updated>{{ page.date | date_to_xmlschema }}</updated>
+   <id>{{ site.url }}{{ page.id }}</id>
+   <content type="html">{% include resource_post.html resaurce=page xml=true %}</content>
+ </entry>{% endfor %}
+</feed>

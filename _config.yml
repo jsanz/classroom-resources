@@ -28,11 +28,34 @@ highlighter        : rouge
 markdown           : kramdown
 lsi                : false
 
+collections:
+  courses:
+    output        : true
+    permalink     : /:collection/:title 
+  resources:
+    output        : true
+    permalink     : /:collection/:title
+
+defaults:
+  - scope:
+      path         : ""
+      type         : courses
+    values:
+      layout       : course
+  - scope:
+      path         : ""
+      type         : resources
+    values:
+      type         : pdf
+      date         : 2017-12-01 00:00:00
+      layout       : resource
+
 include:
-                   - "_pages"
+                   - _pages
 
 exclude: 
                    - LICENSE
+                   - README.md
                    - CNAME
                    - .gitignore
                    - Gemfile
