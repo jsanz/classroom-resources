@@ -4,7 +4,7 @@
     <li>Visit the <a href="{{ page.link}}">resource</a> ({{ page.type}})</li>
     <li>Updated: {{ page.date | date: '%d/%m/%Y' }}</li>
     <li>
-        <a href="{{ site.baseurl}}/courses/{{ page.course | slugify }}/#{{page.subject}}">
+        <a href="{{ site.baseurl}}/courses/{{ page.course | slugify }}#{{page.subject}}">
                 {% include find_subject.html course=page.course subject=page.subject %} ·
                 {{ page.course }}
         </a>
