@@ -18,13 +18,19 @@ Just clone or download this repository, install [Ruby][3] and [`bundle`][4]. The
 
 ## Setting it up
 
-### `_config.yml`
+### Configuration
 
 Edit the `_config.yml` to put your own title, description, your own information and remember to edit the `url` and `baseurl` to your own environment.
 
+The website is set up in English but there are only a few places with strings you need to change to have your site in any other language, apart from the configuration described above:
+
+* `_layout/default.html`: You may want to remove or translate the footer.
+* `_includes/resource_li.html`: Adapt the `more details` text and maybe the date format (more details [here][12]).
+* `_includes/resource_post.html`: Update how to present resource details
+
 ### Front page
 
-The front page is a simple markdown file you can edit and adapt to your necessities. It's available at `_pages/frontpage.md`, feel free to keep the texts there or rearrange to your liking.
+The front page is a simple markdown file you can edit, translate, and adapt to your necessities. It's available at `_pages/frontpage.md`, feel free to keep the texts there or rearrange to your liking.
 
 ### Set up your courses and subjects
 
@@ -68,6 +74,26 @@ After the resource data you can add any [markdown][5] content, including images,
 
 ![](assets/imgs/screenshot.png)
 
+## Styling
+
+This site uses by default the [cayman][10] Jekyll theme but you can easily change the theme on the `_config.yml` file under the `theme` setting to any other theme [supported by GitHub pages][11] or any other theme if you install it directly on your code. You may need to remove or adapt the `_layouts/default.html` file, check theme details on how to customize it.
+
+For example, to use the [merlot][13] theme you only need to set up the `jekyll-theme-merlot` value on the `_config.yml` file and remove the `_layouts/default.html` file to use the one provided by the theme. You then get something like this:
+
+![](assets/imgs/merlot.png)
+
+Of course to present again the list of courses you need to put somewhere the piece of code that renders it on the current `default.html` file, like on a the front page, side bar, etc. The piece that renders that list is actually pretty straight forward:
+
+```liquid
+{% assign courses_by_year = site.courses | sort: 'year' %}
+{% for course in courses_by_year %}
+      <a class="btn" href="{{ course.url | relative_url }}">
+        {{course.title}}
+      </a>
+{% endfor %}
+```
+
+
 ## Other features and ideas
 
 * There is already a XML feed to retrieve the last updates on your resources. This way you can link your site with any syndicated client, pipe to a social network, etc. You can access it from the front page or from `http://yoursite/atom_resources.xml`.
@@ -85,3 +111,6 @@ After the resource data you can add any [markdown][5] content, including images,
 [7]: https://www.jorgesanz.net/
 [8]: https://jekyllrb.com/docs/posts/
 [9]: https://www.netlifycms.org/
+[10]: https://pages-themes.github.io/cayman/
+[11]: https://pages.github.com/versions/
+[12]: http://alanwsmith.com/jekyll-liquid-date-formatting-examples

@@ -1,7 +1,7 @@
 theme              : jekyll-theme-cayman
 title              : Classroom Resources Manager
 description        : >-
-                    This website servers as a template for teachers that want to generate
+                    This website serves as a template for teachers that want to generate
                     a website to provide resources by course to their students.
 
 url                : http://jsanz.github.io/classroom-resources
