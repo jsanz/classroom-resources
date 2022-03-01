@@ -1,3 +1,7 @@
+> ⚠⚠⚠
+> I'm setting this repository in `read-only` mode since I'm not pursoing to maintain or upgrade it. Feel free to [reach me out](https://jorgesanz.net/contact/) if you have any questions or comments.
+> ⚠⚠⚠
+
 # Classroom Resources
 
 ## Why
